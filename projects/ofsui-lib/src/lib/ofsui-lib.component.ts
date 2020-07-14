@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'ofsui-lib-component',
   template: `
     <h1>
-      ofsui-lib NICOOO works!
+      ofsui-lib works!
     </h1>
   `,
   styles: [
