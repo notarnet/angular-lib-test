@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "ofsui-lib": {
+      "projectType": "library",
+      "root": "projects/ofsui-lib",
+      "sourceRoot": "projects/ofsui-lib/src",
+      "prefix": "ofsui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ofsui-lib/tsconfig.lib.json",
+            "project": "projects/ofsui-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ofsui-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ofsui-lib/src/test.ts",
+            "tsConfig": "projects/ofsui-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ofsui-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ofsui-lib/tsconfig.lib.json",
+              "projects/ofsui-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "LibTest"
 }
